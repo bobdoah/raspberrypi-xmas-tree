@@ -1,0 +1,11 @@
+[Unit]
+Description=Light up the tree
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/raspberrypi-xmas-tree/thingspeak_tree.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
